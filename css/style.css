@@ -1,0 +1,239 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+body {
+  overflow: hidden;
+}
+
+.title {
+  display: block;
+  text-align: center;
+  margin: 50px 0;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 40px;
+  }
+}
+
+.wrapper {
+  position: relative;
+  margin: 200px auto;
+  width: 300px;
+  height: 300px;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.cube {
+  width: inherit;
+  height: inherit;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.side {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: inherit;
+  height: inherit;
+  border: 1px solid #000;
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .side {
+    font-size: 20px;
+  }
+}
+
+.side__front {
+  -webkit-transform: translateZ(150px);
+          transform: translateZ(150px);
+  background: url(../../img/moroz.jpg) center 30%/cover no-repeat;
+}
+
+@media (max-width: 600px) {
+  .side__front {
+    -webkit-transform: translateZ(100px);
+            transform: translateZ(100px);
+  }
+}
+
+.side__back {
+  -webkit-transform: rotateY(180deg) translateZ(150px);
+          transform: rotateY(180deg) translateZ(150px);
+  background: url(../../img/alex.jpg) center 30%/cover no-repeat;
+}
+
+@media (max-width: 600px) {
+  .side__back {
+    -webkit-transform: rotateY(180deg) translateZ(100px);
+            transform: rotateY(180deg) translateZ(100px);
+  }
+}
+
+.side__top {
+  -webkit-transform: rotateX(90deg) translateZ(150px);
+          transform: rotateX(90deg) translateZ(150px);
+  background: url(../../img/dima.jpg) center 30%/cover no-repeat;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media (max-width: 600px) {
+  .side__top {
+    -webkit-transform: rotateX(90deg) translateZ(100px);
+            transform: rotateX(90deg) translateZ(100px);
+  }
+}
+
+.side__bottom {
+  -webkit-transform: rotateX(270deg) translateZ(150px);
+          transform: rotateX(270deg) translateZ(150px);
+  background: url(../../img/maks.jpg) center 30%/cover no-repeat;
+}
+
+@media (max-width: 600px) {
+  .side__bottom {
+    -webkit-transform: rotateX(270deg) translateZ(100px);
+            transform: rotateX(270deg) translateZ(100px);
+  }
+}
+
+.side__left {
+  -webkit-transform: rotateY(270deg) translateZ(150px);
+          transform: rotateY(270deg) translateZ(150px);
+  background: url(../../img/naz.jpg) center 30%/cover no-repeat;
+}
+
+@media (max-width: 600px) {
+  .side__left {
+    -webkit-transform: rotateY(270deg) translateZ(100px);
+            transform: rotateY(270deg) translateZ(100px);
+  }
+}
+
+.side__right {
+  -webkit-transform: rotateY(90deg) translateZ(150px);
+          transform: rotateY(90deg) translateZ(150px);
+  background: url(../../img/pasha.jpg) center/cover no-repeat;
+}
+
+@media (max-width: 600px) {
+  .side__right {
+    -webkit-transform: rotateY(90deg) translateZ(100px);
+            transform: rotateY(90deg) translateZ(100px);
+  }
+}

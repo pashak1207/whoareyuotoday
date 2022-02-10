@@ -1,0 +1,95 @@
+@import "_nullstyle";
+
+body {
+    overflow: hidden;
+}
+.title {
+    display: block;
+    text-align: center;
+    margin: 50px 0;
+    font-size: 50px;
+    font-weight: 600;
+    @media (max-width: 600px) {
+        font-size: 40px;
+    }
+}
+.wrapper {
+    position: relative;
+    margin: 200px auto;
+    width: 300px;
+    height: 300px;
+    perspective: 500px;
+    @media (max-width: 600px) {
+        width: 200px;
+        height: 200px;
+    }
+}
+.cube {
+    width: inherit;
+    height: inherit;
+    transform-style: preserve-3d;
+}
+.side {
+    backface-visibility: hidden;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: inherit;
+    height: inherit;
+    border: 1px solid #000;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    @media (max-width: 600px) {
+        font-size: 20px;
+    }
+    &__front {
+        transform: translateZ(150px);
+        @media (max-width: 600px) {
+            transform: translateZ(100px);
+        }
+        background: url(../../img/moroz.jpg) center 30% / cover no-repeat;
+    }
+
+    &__back {
+        transform: rotateY(180deg) translateZ(150px);
+        @media (max-width: 600px) {
+            transform: rotateY(180deg) translateZ(100px);
+        }
+        background: url(../../img/alex.jpg) center 30% / cover no-repeat;
+    }
+
+    &__top {
+        transform: rotateX(90deg) translateZ(150px);
+        @media (max-width: 600px) {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        background: url(../../img/dima.jpg) center 30% / cover no-repeat;
+        align-items: flex-start;
+    }
+
+    &__bottom {
+        transform: rotateX(270deg) translateZ(150px);
+        @media (max-width: 600px) {
+            transform: rotateX(270deg) translateZ(100px);
+        }
+        background: url(../../img/maks.jpg) center 30% / cover no-repeat;
+    }
+
+    &__left {
+        transform: rotateY(270deg) translateZ(150px);
+        @media (max-width: 600px) {
+            transform: rotateY(270deg) translateZ(100px);
+        }
+        background: url(../../img/naz.jpg) center 30% / cover no-repeat;
+    }
+
+    &__right {
+        transform: rotateY(90deg) translateZ(150px);
+        @media (max-width: 600px) {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        background: url(../../img/pasha.jpg) center/ cover no-repeat;
+    }
+}
